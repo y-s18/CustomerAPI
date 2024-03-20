@@ -43,25 +43,25 @@ Or by right clicking the `docker-compose.yml` file then clicking `Compose Up`
 
 **4. Create a database**
 
-+ Run the following command to list all running Docker containers
+Run the following command to list all running Docker containers
 
 ```bash
 docker ps
 ```
 
-+ You should see the name `postgres`. To enter the container, start a bash shell by running the following command
+You should see the name `postgres`. To enter the container, start a bash shell by running the following command
 
 ```bash
 docker exec -it postgres bash
 ```
 
-+ Execute the `psql` command along with the username to make a connection with the Postgres Database Server
+Execute the `psql` command along with the username to make a connection with the Postgres Database Server
 
 ```bash
 psql -U root
 ```
 
-+ Create the database `customer` by running the following command. Run `\l` to list the databases
+Create the database `customer` by running the following command. Run `\l` to list the databases
 
 ```bash
 CREATE DATABASE customer;
@@ -69,13 +69,13 @@ CREATE DATABASE customer;
 
 If you named the database otherwise, open `src/main/resources/application.yml` file and change `spring.datasource.url` to your database name instead of `customer`.
 
-+ Run the following command to establish a Connection With the database
+Run the following command to establish a Connection With the database
 
 ```bash
 \c customer
 ```
 
-+ Press `ctrl + d` to exit the shell
+Press `ctrl + d` to exit the shell
 
 **5. Run the app**
 
